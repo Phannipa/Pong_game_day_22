@@ -14,8 +14,6 @@ screen.tracer(0) #Turn the animation function off because the paddle create at t
 # and show paddle on the position that we need without move from the center.
 
 
-
-
 # Create left and right paddles that respond to key press.
 r_paddle = Paddle((350, 0)) # right side of screen
 l_paddle = Paddle((-350, 0)) # left side if screen
@@ -23,15 +21,11 @@ l_paddle = Paddle((-350, 0)) # left side if screen
 ball = Ball()
 scoreboard = Scoreboard()
 
-
 screen.listen()
 screen.onkey(r_paddle.go_up, "Up") #Do not have parenthesis after paddle.move_up when we call function.
 screen.onkey(r_paddle.go_down, "Down")
 screen.onkey(l_paddle.go_up, "w")
 screen.onkey(l_paddle.go_down, "s")
-
-
-
 
 # Create dash line middle the screen.
 turtle.hideturtle()
@@ -39,6 +33,7 @@ screen.title("Pong Game")
 # turtle.color("white")
 # turtle.penup()
 # turtle.sety(-300)
+
 
 game_is_on = True
 
